@@ -39,3 +39,36 @@ frame.set_keydown_handler(keydown)
 
 collision()
 frame.start()
+
+
+
+#queston 9
+#http://www.codeskulptor.org/#user41_hABZTCVXOY_1.py
+import simplegui
+
+number = 5
+width = 400
+height = 400
+
+def draw(canvas):
+    global number
+    canvas.draw_text(str(number),[width/2,height/2],20,"Red")
+    
+   
+def keydown(key):
+    global number
+    if key == simplegui.KEY_MAP['up']:
+        number = number*2
+        
+def keyup(key):
+    global number 
+    if key == simplegui.KEY_MAP['up']:
+        number -= 3
+        
+frame = simplegui.create_frame("testing",width,height)
+frame.set_draw_handler(draw)
+frame.set_keydown_handler(keydown)
+frame.set_keyup_handler(keyup)
+
+frame.start()
+        
