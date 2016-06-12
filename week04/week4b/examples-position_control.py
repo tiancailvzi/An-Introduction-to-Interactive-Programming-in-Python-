@@ -1,4 +1,5 @@
 # control the position of a ball using the arrow keys
+#KEY_MAP 后面跟[]
 
 import simplegui
 
